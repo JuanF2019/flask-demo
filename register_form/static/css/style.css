@@ -1,9 +1,14 @@
 body{
 
     font-family: sans-serif;
-    background-color: antiquewhite;
+    background-color: #EEEEEE;
 }
 
 h1{
-    color:chocolate;
+    color:gray;
+}
+
+.welcome-msg{
+    padding-top: 5%;
+    text-align: center;
 }
