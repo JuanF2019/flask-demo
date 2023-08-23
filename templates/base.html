@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My web site - {%block title%}{% endblock %}</title>
+        <link rel="stylesheet" href="{{ url_for('static',filename='css/style.css')}}"
+    </head>
+    <body>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('index')}}">Inicio</a></li>
+                <li><a href="{{ url_for('hello3')}}">Hello3</a></li>
+                <li><a href="{{ url_for('code',code='print(code)')}}">Code</a></li>
+                <li><a href="{{ url_for('register')}}">Register user</a></li>
+            </ul>
+        </nav>
+        {%block content%}
+
+        {% endblock%}
+        
+        <script src="{{ url_for('static', filename='js/main.js')}}"></script>
+
+    </body>
+    
+</html>
