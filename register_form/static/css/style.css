@@ -6,9 +6,21 @@ body{
 
 h1{
     color:gray;
+    margin: 20px;
 }
 
 .welcome-msg{
     padding-top: 5%;
     text-align: center;
+}
+
+.form-group {
+    margin: 15px;
+}
+
+.field-input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
 }

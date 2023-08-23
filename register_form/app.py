@@ -37,4 +37,4 @@ def register():
         password = form.password.data
         return f"Username: {username}, Contraseña: {password}"
 
-    return render_template('auth/register.html',form=form)
+    return render_template('auth/register.html', form=form)

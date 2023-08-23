@@ -1,21 +1,41 @@
 {% extends 'base.html'%}
 
-{% block title %} Registrar usuario {%endblock%}
+{% block title %} Sign Up {%endblock%}
 
 {% block content %}
-<h1>Register User</h1>
+    <div class="form-container">
+        <h1 class="m-3"> Register User </h1>
+        <form action="" method="POST">
+            {{ form.hidden_tag() }}
+            <div class="form-group m-5">
+                {{ form.username.label }}
+                {{ form.username(class_='field-input m-2') }}
+                &nbsp;
+                {{ form.email.label }}
+                {{ form.email(class_='field-input m-2') }}
+            </div>
+            <div class="form-group m-5 ">
+                {{ form.name.label }}
+                {{ form.name(class_='field-input m-2') }}
+                &nbsp;
+                {{ form.age.label (class_='m-4')}}
+                {{ form.age(class_='field-input m-2') }}
+            </div>
+            <div class="form-group m-5">
+                {{ form.password.label }}
+                {{ form.password(class_='field-input m-2') }}
+            </div>
+            <div class="form-group m-5">
+                {{ form.gender.label }}
+                {{ form.gender(class_='field-input m-2') }}
+            </div>
+            <div class="text-left">
+                {{ form.submit(class="btn btn-outline-secondary m-5") }}
+            </div>
+        </form>
+    </div>
 
-<form action="" method="POST">
-    {{form.hidden_tag()}}
-    {{form.username.label}}{{form.username}}
-    {{form.email.label}}{{form.email}}
-    {{form.name.label}}{{form.name}}
-    {{form.age.label}}{{form.age}}
-    {{form.gender.label}}{{form.gender}}
-    {{form.password.label}}{{form.password}}
 
-    {{form.submit}}
-</form>
 
 {%if error%}
     <p style="color:red;">{{error}}</p>
